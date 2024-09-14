@@ -48,6 +48,9 @@ def main():
             data[:3,:,:] = mini_img1.transpose([2,0,1])
             data[3:6,:,:] = mini_img2.transpose([2,0,1])
             data[6,:,:] = mini_lbl[:,:,0]
+            print("Image shape mini_lbl:", mini_lbl.shape)
+            print("Image shape mini_lbl[:,:,0]:", mini_lbl[:,:,0].shape)
+            # data[6,:,:] = mini_lbl # Just initialization without channel selection
             file_nm = main_dir + 'data/' + city_nm + str(i).zfill(3) + '.npy'
             np.save(file_nm, data)
             if VISUALIZE:
