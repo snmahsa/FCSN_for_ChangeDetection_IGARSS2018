@@ -28,6 +28,16 @@ def main():
         lbl_file = os.path.join(labels_dir, city_nm, 'cm', 'cm.png')
         lbl = Image.open(lbl_file)
         lbl = np.asarray(lbl)
+        # check runnig
+        print("City names:", city_nm_ls)
+        print("Processing:", city_nm)
+        print("img_file1:", img_file1)
+        print("img_file2:", img_file2)
+        print("lbl_file:", lbl_file)
+        print("Image shape img1:", img1.shape)
+        print("Image shape img2:", img2.shape)
+        print("Image shape lbl:", lbl.shape)
+
         for i in range(int((IMAGE_NUMBER-1)/len(city_nm_ls))+1):
             x = np.random.randint(img1.shape[0]-IMAGE_SIZE)
             y = np.random.randint(img1.shape[1]-IMAGE_SIZE)
