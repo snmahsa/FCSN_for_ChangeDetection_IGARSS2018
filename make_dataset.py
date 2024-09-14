@@ -9,7 +9,7 @@ VISUALIZE = 0
 MAIN_DIR = './'
 IMAGE_FOLDER = 'images'
 LABEL_FOLDER = 'labels'
-
+Save_DIR = './'
 def main():
     main_dir = MAIN_DIR
     images_dir = main_dir + IMAGE_FOLDER
@@ -19,13 +19,13 @@ def main():
     if not('data' in os.listdir(main_dir)):
         os.mkdir(main_dir+'data')
     for city_nm in city_nm_ls:
-        img_file1 = images_dir + city_nm + '/pair/img1.png'
+        img_file1 = os.path.join(images_dir, city_nm, 'pair', 'img1.png') 
         img1 = Image.open(img_file1)
         img1 = np.asarray(img1)
-        img_file2 = images_dir + city_nm + '/pair/img2.png'
+        img_file2 = os.path.join(images_dir, city_nm, 'pair', 'img2.png')
         img2 = Image.open(img_file2)
         img2 = np.asarray(img2)
-        lbl_file = labels_dir + city_nm + '/cm/cm.png'
+        lbl_file = os.path.join(labels_dir, city_nm, 'cm', 'cm.png')
         lbl = Image.open(lbl_file)
         lbl = np.asarray(lbl)
         for i in range(int((IMAGE_NUMBER-1)/len(city_nm_ls))+1):
