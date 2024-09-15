@@ -30,4 +30,4 @@ This project focuses on analyzing changes in satellite images using Fully Convol
 - Related paper: [Fully Convolutional Siamese Networks for Change Detection](https://arxiv.org/abs/1810.08462)
 - Dataset used: [Onera Satellite Change Detection Dataset](https://rcdaudt.github.io/oscd/)
 
-This project serves as a useful tool for detecting changes in satellite images and can assist research in environmental monitoring and infrastructure development.
+* This project serves as a useful tool for detecting changes in satellite images and can assist research in environmental monitoring and infrastructure development.
